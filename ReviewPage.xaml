@@ -16,6 +16,7 @@
                             <StackLayout Orientation="Horizontal" Padding="10,5">
                                 <Label Text="{Binding .}" TextColor="Black" LineBreakMode="WordWrap"/>
                                 <Button Text="Șterge" Clicked="OnDeleteReviewClicked" CommandParameter="{Binding .}" />
+                                <Button Text="Modifică" Clicked="OnEditReviewClicked" CommandParameter="{Binding .}" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

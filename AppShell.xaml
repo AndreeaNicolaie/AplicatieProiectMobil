@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AplicatieProiectMobil.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AplicatieProiectMobil"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!-- Personalizare bara de navigare -->
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="Setări" Order="Primary" Priority="0" />
+    </Shell.ToolbarItems>
+
+    <!-- Personalizare fundal Shell -->
+    <Shell.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color">
+            <On Platform="iOS" Value="White" />
+            <On Platform="Android" Value="#FFF" />
+        </OnPlatform>
+    </Shell.BackgroundColor>
+
+    <TabBar>
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Icon="about_icon.png" />
+        <ShellContent
+            Title="Lista restaurante"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="restaurant_icon.png" />
+        <ShellContent
+            Title="Pachete"
+            ContentTemplate="{DataTemplate local:PachetPage}"
+            Icon="package_icon.png" />
+        <ShellContent
+            Title="Review"
+            ContentTemplate="{DataTemplate local:ReviewPage}"
+            Icon="review_icon.png" />
+    </TabBar>
+
+</Shell>
